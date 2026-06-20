@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Engine Documentation</title>
+    <style>
+        .inputs-group, input[type="text"] {
+            width: 300px;
+        }
+        .code {
+            margin-inline: 10px;
+            font-family: monospace;
+        }
+        .m { margin-bottom: 1rem; }
+        body{
+            
+            padding: 20px;
+        }
+    </style>
+</head>
+<body class="purple bg-dkst">
+
+    <br>
+    <center><h1 class="tx-lgst">📦 UI Framework Documentation</h1></center>
+    <br>
+
+    <h2 class="tx-lgst m">🎨 Theme Optimization</h2>
+    
+    <h4 class="tx-lg m">The framework includes 7 built-in primary colors: <code class="red tx-ac">red</code>, <code class="blue tx-ac">blue</code>, <code class="green tx-ac">green</code>, <code class="yellow tx-ac">yellow</code>, <code class="orange tx-ac">orange</code>, <code class="purple tx-ac">purple</code>, and <code class="pink tx-ac">pink</code>. To apply a global theme, add the color class to the body tag:</h4>
+    <div class="code">&lt;body class="[your-color]"&gt;&lt;/body&gt;</div>
+    
+    <h4 class="tx-lg m">We also provide 5 variations mapped directly to your active theme (<code>.lgst</code> for lightest, <code>.lg</code> for light, <code>.ac</code> for accent, <code>.dk</code> for dark, and <code>.dkst</code> for darkest). Apply them using the background or text utility prefixes:</h4>
+    <div class="code">&lt;div class="[<b>'bg-[variant]'</b> for backgrounds, <b>'tx-[variant]'</b> for text]"&gt;&lt;/div&gt;</div>
+
+    <h2 class="tx-lgst m">📐 Proportions</h2>
+    <h4 class="tx-lg m">Manage dimensions dynamically using our responsive custom properties instead of hardcoded CSS values. For external layout resources, you can use the reference link below.</h4>
+    <button class="btn" onclick='window.location.href="https://www.youtube.com/results?search_query=css+width+and+height+tutorial"' style="margin-inline: 10px;">CSS Dimension Guide</button>
+    
+    <h4 class="tx-lg m">To explicitly define element width:</h4>
+    <div class="code">&lt;div class="w" style="--w: [value];"&gt;&lt;/div&gt;</div>
+    
+    <h4 class="tx-lg m">To explicitly define element height:</h4>
+    <div class="code">&lt;div class="h" style="--h: [value];"&gt;&lt;/div&gt;</div>
+
+    <h2 class="tx-lgst m">🧩 Components</h2>
+    <h4 class="tx-lg m">Our lightweight UI engine includes a robust set of modular pre-styled components.</h4>
+    
+    <h3 class="tx-lgst m">🖱️ Buttons</h3>
+    <div class="code">&lt;button class="btn"&gt;[Content]&lt;/button&gt;</div>
+    <div class="m"></div>
+    <div class="code">&lt;a href="#" class="btn"&gt;[Content]&lt;/a&gt;</div>
+    
+    <h3 class="tx-lgst m">👀 Button Examples</h3>
+    <div class="l">
+        <button style="width: auto;">Standard Button Element</button>
+        <a class="btn" href="#action" style="width: auto;">Anchor Styled as Button</a>
+    </div>
+    
+    <h3 class="tx-lgst m">📝 Form Inputs</h3>
+    <h4 class="tx-lg m">We offer both native element syntax and enhanced wrapper groups for advanced form behaviors.</h4>
+    
+    <h3 class="tx-lgst m">🔤 Input Fields</h3>
+    <h4 class="tx-lg m">Standard HTML structure:</h4>
+    <div class="code">&lt;input type="text"&gt;</div>
+    
+    <h4 class="tx-lg m">Enhanced Component wrapper:</h4>
+    <div class="code">&lt;div class="inputs-group" label="[Label Text]" type="[Input Type]"&gt;&lt;/div&gt;</div>
+    
+    <h3 class="tx-lgst m">✨ Form Previews</h3>
+    <div class="l m" style="width: 100vw;">
+        <div class="inputs-group" label="Username" type="text"></div>
+        <div class="inputs-group" label="Password" type="password"></div>
+        <input type="text" placeholder="Standard Text Input">
+    </div>
+    
+    <h3 class="tx-lgst m">🎛️ Sliders</h3>
+    <h4 class="tx-lg m">Range sliders are universally styled right out of the box:</h4>
+    <div class="code">&lt;input type="range"&gt;</div>
+    
+    <h3 class="tx-lgst m">✨ Slider Preview</h3>
+    <div class="l m" style="width: 100vw;">
+        <input type="range" name="slider-demo" id="slider-demo">
+    </div>
+    
+    <h3 class="tx-lgst m">✅ Selection Controls</h3>
+    <h3 class="tx-lg m">Checkboxes</h3>
+    <div class="code">&lt;input type="checkbox"&gt;</div>
+    
+    <h3 class="tx-lg m">Radio Buttons</h3>
+    <div class="code">&lt;input type="radio"&gt;</div>
+    
+    <h3 class="tx-lgst m">✨ Selection Preview</h3>
+    <div class="l m" style="width: 100vw;">
+        <input type="checkbox">
+        <input type="radio" name="radio-demo">
+        <input type="radio" name="radio-demo">
+    </div>
+
+    <h3 class="tx-lgst m">📁 File Uploads</h3>
+    <div class="code">&lt;input type="file"&gt;</div>
+    <h3 class="tx-lgst m">✨ File Input Preview</h3>
+    <div class="l m" style="width: 50%;">
+        <input type="file" name="file-demo" id="file-demo">
+    </div>
+    
+    <h3 class="tx-lgst m">🕒 Time Pickers</h3>
+    <div class="code">&lt;input type="time"&gt;</div>
+    <h3 class="tx-lgst m">✨ Time Input Preview</h3>
+    <div class="l m" style="width: 50%;">
+        <input type="time" name="time-demo" id="time-demo">
+    </div>
+    
+    <h3 class="tx-lgst m">🧪 Color Pickers</h3>
+    <h4 class="tx-lg m">Provides integrated integration with native OS color selection matrices:</h4>
+    <div class="code">&lt;input type="color"&gt;</div>
+    <h3 class="tx-lgst m">✨ Color Input Preview</h3>
+    <div class="l m" style="width: 50%;">
+        <input type="color" name="color-demo" id="color-demo">
+    </div>
+
+    <h3 class="tx-lgst m">💻 Code Blocks</h3>
+    <h4 class="tx-lg m">Designed specifically for rendering code blocks dynamically within document templates.</h4>
+    <div class="code">&lt;div class="code"&gt;[code]&lt;/div&gt;</div>
+    
+    <h3 class="tx-lgst m">✨ Code Block Preview</h3>
+    <div class="l m" style="width: 100vw;">
+        <div class="code">
+            <pre>import requests&#10;response = requests.get("https://api.github.com")</pre>
+        </div>
+    </div>
+    
+    <h3 class="tx-lgst m">🔽 Drop-Down Menus</h3>
+    <h4 class="tx-lg m">Standard HTML dropdown select menus are fully optimized:</h4>
+    <div class="code">
+        <pre>&lt;select&gt;&#10;  &lt;option&gt;Option 1&lt;/option&gt;&#10;  &lt;option&gt;Option 2&lt;/option&gt;&#10;&lt;/select&gt;</pre>
+    </div>
+    
+    <h3 class="tx-lgst m">✨ Dropdown Preview</h3>
+    <div class="l m" style="width: 40vw;">
+        <select name="dropdown-demo" id="dropdown-demo">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+        </select>
+    </div>
+
+    <h2 class="tx-lgst m">⚡ Layout Engines</h2>
+    <h4 class="tx-lg m">We provide 2 structured container types to seamlessly organize layouts without manual flexbox writing.</h4>
+    
+    <h3 class="tx-lgst m">🔹 Vertical Layout</h3>
+    <div class="code">&lt;div class="vl"&gt;&lt;/div&gt;</div>
+    
+    <h3 class="tx-lgst m">🔹 Horizontal Layout</h3>
+    <div class="code">&lt;div class="l"&gt;&lt;/div&gt;</div>
+    
+    <h3 class="tx-lgst m">⚙️ Layout Demo</h3>
+    <div class="vl m" style="width: 100vw;">
+        <div class="l" style="width: 100vw;">
+            <div class="vl" style="width: 50%; align-items: center;">
+                <h3 class="tx-lgst">Vertical Layout</h3>
+                <h3 class="tx-lgst green">Sub-item</h3>
+            </div>
+            <div class="l" style="width: 50%; align-items: center;">
+                <h3 class="tx-lgst">Horizontal Layout</h3>
+                <h3 class="tx-lgst green">Sub-item</h3>
+            </div>
+        </div>
+        <h3 class="tx-lg m">💡 Append an <b class="tx-lgst green">'s'</b> to any layout class name (e.g., <code>vls</code> or <code>ls</code>) to wrap it inside a strict content container.</h3>
+        
+        <h2 class="tx-lgst m">🎯 Alignment Utilities</h2>
+        <h3 class="tx-lg m">Modern layouts leverage predefined framework attributes for instant item alignments and distribution. If you need a refresher on positioning principles, refer to the document below:</h3>
+        <button class="btn" onclick='window.location.href="https://www.youtube.com/results?search_query=how+to+center+a+div"' style="margin-inline: 10px;">🔍 Flexbox Alignment Reference Guide</button>
+    </div>
+
+    <script src="oui_2.js"></script>
+    <script>
+        console.log("UI Framework Documentation Initialized.");
+    </script>
+</body>
+</html>
