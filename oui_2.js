@@ -1,4 +1,4 @@
-const css=()=>{const head = document.querySelector('head');head.innerHTML+=`<link rel="stylesheet" href="https://github.com/OmarxMario/doucmentery/ui.css">`;}
+const css=()=>{const head = document.querySelector('head');head.innerHTML+=`<link rel="stylesheet" href="ui.css">`;}
 const initsld=()=>{const sliders=document.querySelectorAll("input[type='range']");sliders.forEach(slider=>{const updateSlider=()=>{const max = slider.max||100;const valuePercentage=(slider.value/max)*100;slider.style.background = `linear-gradient(to right, rgba(0, 0, 0, 0.19) ${valuePercentage}%,#ebe9e7 ${valuePercentage}%)`;};updateSlider();slider.addEventListener('input',updateSlider);});}
 const input_felids=()=>{const groups=document.querySelectorAll('.inputs-group');groups.forEach(group=>{const labelText = group.getAttribute('label')||'Input'||'type';const inputId = `oui-${Math.random().toString(36).substr(2, 9)}`;const type=group.getAttribute('type')||'text';group.innerHTML=`<input type="${type}" id="${inputId}" placeholder=" "><label for="${inputId}">${labelText}</label>`;});};
 document.addEventListener('DOMContentLoaded',()=>{css();input_felids();initsld();});
